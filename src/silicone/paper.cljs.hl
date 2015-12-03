@@ -1,0 +1,63 @@
+(ns silicone.paper
+  (:require [silicone.core :as core]))
+
+(def paper-elements [:paper-badge
+                     :paper-button
+                     :paper-card
+                     :paper-checkbox
+                     :paper-dialog
+                     :paper-dialog-behavior
+                     :paper-dialog-scrollable
+                     :paper-drawer-panel
+                     :paper-dropdown-menu
+                     :paper-fab
+                     :paper-header-panel
+                     :paper-icon-button
+                     :paper-input
+                     :paper-item
+                     :paper-material
+                     :paper-menu
+                     :paper-menu-button
+                     :paper-progress
+                     :paper-radio-button
+                     :paper-radio-group
+                     :paper-ripple
+                     :paper-scroll-header-panel
+                     :paper-slider
+                     [:paper-styles :color]
+                     [:paper-styles :shadow]
+                     [:paper-styles :typography]
+                     [:paper-styles :demo-pages]
+                     :paper-tabs
+                     :paper-toggle-button
+                     :paper-toolbar
+                     :paper-tooltip])
+
+(defn import-elements [& path] (apply core/import-elements paper-elements path))
+
+(def paper-badge               (core/elem-ctor "paper-badge"))
+(def paper-button              (core/elem-ctor "paper-button"))
+(def paper-card                (core/elem-ctor "paper-card"))
+(def paper-checkbox            (core/elem-ctor "paper-checkbox"))
+(def paper-dialog              (core/elem-ctor "paper-dialog"))
+(def paper-dialog-scrollable   (core/elem-ctor "paper-dialog-scrollable"))
+(def paper-drawer-panel        (core/elem-ctor "paper-drawer-panel"))
+(def paper-dropdown-menu       (core/elem-ctor "paper-dropdown-menu"))
+(def paper-fab                 (core/elem-ctor "paper-fab"))
+(def paper-header-panel        (core/elem-ctor "paper-header-panel"))
+(def paper-icon-button         (core/elem-ctor "paper-icon-button"))
+(def paper-input               (core/elem-ctor "paper-input"))
+(def paper-item                (core/elem-ctor "paper-item"))
+(def paper-material            (core/elem-ctor "paper-material"))
+(def paper-menu                (core/elem-ctor "paper-menu"))
+(def paper-menu-button         (core/elem-ctor "paper-menu-button"))
+(def paper-progress            (core/elem-ctor "paper-progress"))
+(def paper-radio-button        (core/elem-ctor "paper-radio-button"))
+(def paper-radio-group         (core/elem-ctor "paper-radio-group"))
+(def paper-ripple              (core/elem-ctor "paper-ripple"))
+(def paper-scroll-header-panel (core/elem-ctor "paper-scroll-header-panel"))
+(def paper-slider              (core/elem-ctor "paper-slider"))
+(def paper-tabs                (core/elem-ctor "paper-tabs"))
+(def paper-toggle-button       (core/elem-ctor "paper-toggle-button"))
+(def paper-toolbar             (core/elem-ctor "paper-toolbar"))
+(def paper-tooltip             (core/elem-ctor "paper-tooltip"))

@@ -1,0 +1,45 @@
+(ns silicone.iron
+  (:require [silicone.core :as core]))
+
+(def iron-elements [:iron-a11y-announce
+                    :iron-a11y-keys
+                    :iron-a11y-keys-behavior
+                    :iron-ajax
+                    :iron-autogrow-textarea
+                    :iron-collapse
+                    :iron-checked-element-behvaior
+                    :iron-doc-viewer
+                    :iron-dropdown
+                    :iron-fit-behvaior
+                    :iron-flex-layout
+                    :iron-form
+                    :iron-form-element-behavior
+                    :iron-icon
+                    :iron-image
+                    :iron-list
+                    :iron-localstorage
+                    :iron-media-query
+                    :iron-menu-behavior
+                    :iron-meta
+                    :iron-overlay-behavior
+                    :iron-pages
+                    :iron-range-behavior
+                    :iron-selector
+                    :iron-signals
+                    :iron-validatable-behavior
+                    :iron-validator-behavior])
+
+(defn import-elements [& path] (apply core/import-elements iron-elements path))
+
+(def iron-ajax              (core/elem-ctor "iron-ajax"))
+(def iron-autogrow-textarea (core/elem-ctor "iron-autogrow-textarea"))
+(def iron-collapse          (core/elem-ctor "iron-collapse"))
+(def iron-doc-viewer        (core/elem-ctor "iron-doc-viewer"))
+(def iron-dropdown          (core/elem-ctor "iron-dropdown"))
+(def iron-flex-layout       (core/elem-ctor "iron-flex-layout"))
+(def iron-icon              (core/elem-ctor "iron-icon"))
+(def iron-image             (core/elem-ctor "iron-image"))
+(def iron-media-query       (core/elem-ctor "iron-media-query"))
+(def iron-list              (core/elem-ctor "iron-list"))
+(def iron-pages             (core/elem-ctor "iron-pages"))
+(def iron-selector          (core/elem-ctor "iron-pages"))
