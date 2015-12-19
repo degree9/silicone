@@ -1,37 +1,8 @@
 (ns silicone.paper
   (:require [silicone.core :as core]))
 
-(def paper-elements [:paper-badge
-                     :paper-button
-                     :paper-card
-                     :paper-checkbox
-                     :paper-dialog
-                     :paper-dialog-behavior
-                     :paper-dialog-scrollable
-                     :paper-drawer-panel
-                     :paper-dropdown-menu
-                     :paper-fab
-                     :paper-header-panel
-                     :paper-icon-button
-                     :paper-input
-                     :paper-item
-                     :paper-material
-                     :paper-menu
-                     :paper-menu-button
-                     :paper-progress
-                     :paper-radio-button
-                     :paper-radio-group
-                     :paper-ripple
-                     :paper-scroll-header-panel
-                     :paper-slider
-                     [:paper-styles :color]
-                     [:paper-styles :shadow]
-                     [:paper-styles :typography]
-                     [:paper-styles :demo-pages]
-                     :paper-tabs
-                     :paper-toggle-button
-                     :paper-toolbar
-                     :paper-tooltip])
+(def paper-elements [:paper-elements
+                     [:paper-styles :paper-styles-classes]])
 
 (defn import-elements [& path] (apply core/import-elements paper-elements path))
 

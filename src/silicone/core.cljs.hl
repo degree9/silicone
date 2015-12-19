@@ -8,9 +8,11 @@
 
 (defn import-elements [elements & [path]]
   (let [link #(let [path  (or path "bower_components")
-                    epath (if (vector? %) (first %) %)
-                    fpath (if (vector? %) (last %) %)
-                    fullpath (clojure.string/join [path "/" (-> epath name str) "/" (-> fpath name str) ".html"])]
+                    plist (cond (keyword? %) [path (-> % name str) (-> % name str)]
+                                (vector?  %) (into [path] (map (fn [x] (-> x name str)) (flatten %)))
+                                :else %)
+                    path (clojure.string/join "/" plist)
+                    fullpath (clojure.string/join [path ".html"])]
                 (link :rel "import" :href fullpath))]
     (into [] (map link elements))))
 
