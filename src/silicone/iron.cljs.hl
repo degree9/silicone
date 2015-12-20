@@ -1,7 +1,18 @@
 (ns silicone.iron
   (:require [silicone.core :as core]))
 
-(defn import-elements [& path] (core/import-elements [:iron-elements] path))
+(def iron-elements [:iron-elements
+                    [:iron-icons :av-icons]
+                    [:iron-icons :communication-icons]
+                    [:iron-icons :device-icons]
+                    [:iron-icons :editor-icons]
+                    [:iron-icons :hardware-icons]
+                    [:iron-icons :image-icons]
+                    [:iron-icons :maps-icons]
+                    [:iron-icons :notification-icons]
+                    [:iron-icons :social-icons]])
+
+(defn import-elements [& path] (apply core/import-elements iron-elements path))
 
 (def iron-ajax              (core/elem-ctor "iron-ajax"))
 (def iron-autogrow-textarea (core/elem-ctor "iron-autogrow-textarea"))
