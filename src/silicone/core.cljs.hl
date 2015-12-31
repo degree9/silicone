@@ -19,3 +19,11 @@
 (def dom-module (elem-ctor "dom-module"))
 
 (def template   (elem-ctor "template"))
+
+(defmethod do! :selected
+  [elem _ v]
+  (.setAttribute (goog.dom.getElement elem) "selected" v))
+
+(defmethod do! :checked
+  [elem _ v]
+  (.setAttribute (goog.dom.getElement elem) "checked" v))

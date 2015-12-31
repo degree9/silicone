@@ -29,6 +29,7 @@
 (def paper-scroll-header-panel (core/elem-ctor "paper-scroll-header-panel"))
 (def paper-slider              (core/elem-ctor "paper-slider"))
 (def paper-tabs                (core/elem-ctor "paper-tabs"))
+(def paper-textarea            (core/elem-ctor "paper-textarea"))
 (def paper-toggle-button       (core/elem-ctor "paper-toggle-button"))
 (def paper-toolbar             (core/elem-ctor "paper-toolbar"))
 (def paper-tooltip             (core/elem-ctor "paper-tooltip"))
